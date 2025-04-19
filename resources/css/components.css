@@ -1,0 +1,14 @@
+.card {
+    @apply p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700
+}
+
+.btnRojo {
+    color: red;
+}
+
+.textoAjustado {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    line-clamp: 2;
+}

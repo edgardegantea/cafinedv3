@@ -1,7 +1,16 @@
 <x-layouts.public.public>
     <div class="container mx-auto py-10">
 
-        <a href="{{ route('posts.index') }}" class="inline-block mt-8 text-blue-500 hover:text-blue-700 my-5 flex justify-end">Back to Posts</a>
+
+
+        <div class="my-5 flex justify-end">
+            <flux:button
+                href="{{ route('posts.index') }}"
+                icon="arrow-left">
+                Volver
+            </flux:button>
+        </div>
+
 
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
             @if($post->image_path)
@@ -9,6 +18,7 @@
             @endif
             <div class="p-8">
                 <h1 class="text-3xl font-bold mb-4">{{ $post->title }}</h1>
+                <p class="text-gray-600">{{ $post->published_at }}</p>
                 <p class="text-gray-700 leading-relaxed">{!! $post->content !!}</p>
                 <p class="text-sm text-gray-500 mt-6">Published on: {{ $post->created_at->format('F j, Y') }}</p>
             </div>

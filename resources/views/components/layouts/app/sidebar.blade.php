@@ -10,6 +10,14 @@
             ],
 
             [
+                'name'  => 'Usuarios',
+                'icon'  => 'users',
+                'url'   => route('admin.users.index'),
+                'current'    => request()->routeIs('admin.users.*'),
+            ],
+
+
+            [
                 'name'  => 'Categorías',
                 'icon'  => 'rectangle-stack',
                 'url'   => route('admin.categories.index'),

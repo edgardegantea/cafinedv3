@@ -4,7 +4,7 @@
         <flux:breadcrumbs.item :href="route('dashboard')">
             Dashboard
         </flux:breadcrumbs.item>
-        <flux:breadcrumbs.item :href="route('tags.index')">
+        <flux:breadcrumbs.item :href="route('admin.tags.index')">
             Etiquetas
         </flux:breadcrumbs.item>
         <flux:breadcrumbs.item>
@@ -14,7 +14,7 @@
 
 
     <div class="card mt-5">
-        <form action="{{ route('tags.store') }}" method="post">
+        <form action="{{ route('admin.tags.store') }}" method="post">
             @csrf
             <flux:input label="Etiqueta" name="name" description="Ingrese el nombre de la etiqueta" value="{{ old('name') }}"></flux:input>
             <div class="flex justify-end mt-5">

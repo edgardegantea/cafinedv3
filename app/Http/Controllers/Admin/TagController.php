@@ -42,7 +42,7 @@ class TagController extends Controller
             'text'  => 'La etiqueta se ha creado correctamente.',
         ]);
 
-        return redirect()->route('tags.index');
+        return redirect()->route('admin.tags.index');
     }
 
     /**
@@ -78,7 +78,7 @@ class TagController extends Controller
             'text'  => 'La etiqueta se ha actualizado correctamente.',
         ]);
 
-        return redirect()->route('tags.index');
+        return redirect()->route('admin.tags.index');
     }
 
     /**
@@ -93,6 +93,6 @@ class TagController extends Controller
             'text'  => 'Etiqueta eliminada correctamente.',
         ]);
 
-        return redirect()->route('tags.index');
+        return redirect()->route('admin.tags.index');
     }
 }

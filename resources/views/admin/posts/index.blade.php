@@ -11,8 +11,8 @@
 
 
     <div class="mt-3 flex justify-end">
-        <a href="{{ route('posts.create') }}">
-            <flux:button icon="plus">
+        <a href="{{ route('admin.posts.create') }}">
+            <flux:button variant="primary" class="cursor-pointer" icon="plus">
                 Nueva publicación
             </flux:button>
         </a>
@@ -51,13 +51,13 @@
                     <td class="px-6 py-4">
 
                         <flux:button.group>
-                            <a href=""><flux:button icon="eye"></flux:button></a>
-                            <a href="{{ route('posts.edit', $post) }}"><flux:button icon="pencil"></flux:button></a>
+                            <a href=""><flux:button class="cursor-pointer" icon="eye"></flux:button></a>
+                            <a href="{{ route('admin.posts.edit', $post) }}"><flux:button class="cursor-pointer" icon="pencil"></flux:button></a>
 
-                            <form class="delete-form" action="{{ route('posts.destroy', $post) }}" method="POST">
+                            <form class="delete-form" action="{{ route('admin.posts.destroy', $post) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <flux:button type="submit" icon="trash" class="btnRojo"></flux:but>
+                                <flux:button type="submit" icon="trash" class="btnRojo cursor-pointer"></flux:but>
                             </form>
                         </flux:button.group>
 

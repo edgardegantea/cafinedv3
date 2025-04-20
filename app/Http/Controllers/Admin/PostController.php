@@ -55,7 +55,7 @@ class PostController extends Controller
             'text'  => 'La categoría se ha creado correctamente.',
         ]);
 
-        return redirect()->route('posts.index');
+        return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -125,7 +125,7 @@ class PostController extends Controller
             'text'  => 'La publicación se ha actualizado correctamente.',
         ]);
 
-        return redirect()->route('posts.edit', $post);
+        return redirect()->route('admin.posts.edit', $post);
     }
 
     /**
@@ -145,6 +145,6 @@ class PostController extends Controller
             'text'  => 'Publicación eliminada correctamente.',
         ]);
 
-        return redirect()->route('posts.index');
+        return redirect()->route('admin.posts.index');
     }
 }

@@ -4,7 +4,7 @@
         <flux:breadcrumbs.item :href="route('dashboard')">
             Dashboard
         </flux:breadcrumbs.item>
-        <flux:breadcrumbs.item :href="route('categories.index')">
+        <flux:breadcrumbs.item :href="route('admin.categories.index')">
             Categorías
         </flux:breadcrumbs.item>
         <flux:breadcrumbs.item>
@@ -18,7 +18,7 @@
 
     <div class="card mt-5">
 
-        <form action="{{ route('categories.store') }}" method="post">
+        <form action="{{ route('admin.categories.store') }}" method="post">
             @csrf
 
             <flux:input label="Categoría" name="name" description="Ingrese el nombre de la categoría" value="{{ old('name') }}"></flux:input>

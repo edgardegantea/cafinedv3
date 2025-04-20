@@ -9,7 +9,7 @@
         <flux:breadcrumbs.item :href="route('dashboard')">
             Dashboard
         </flux:breadcrumbs.item>
-        <flux:breadcrumbs.item :href="route('posts.index')">
+        <flux:breadcrumbs.item :href="route('admin.posts.index')">
             Publicaciones
         </flux:breadcrumbs.item>
         <flux:breadcrumbs.item>
@@ -20,7 +20,7 @@
 
     <div class="card mt-5">
 
-        <form action="{{ route('posts.update', $post) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.posts.update', $post) }}" method="POST" enctype="multipart/form-data">
 
 
             @csrf
@@ -33,7 +33,7 @@
 
                 <img id="imgPreview" class="w-full aspect-video object-cover object-center" src="{{ $post->image_path ? Storage::url($post->image_path) : 'https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg' }}">
                 <div class="absolute top-8 right-8">
-                    <label class="bg-white px-4 py-2 rounded-lg cursor-pointer">
+                    <label class="bg-white px-4 py-2 border-2 rounded-lg cursor-pointer">
                         Cambiar imagen
                         <input type="file" class="hidden" name="image" accept="image/*" onchange="previewImage(event, '#imgPreview')">
                     </label>

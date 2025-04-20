@@ -43,7 +43,7 @@ class CategoryController extends Controller
             'text'  => 'La categoría se ha creado correctamente.',
         ]);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('admin.categories.index');
 
     }
 
@@ -81,7 +81,7 @@ class CategoryController extends Controller
             'text'  => 'La categoría se ha actualizado correctamente.',
         ]);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -96,6 +96,6 @@ class CategoryController extends Controller
             'text'  => 'Categoría eliminada correctamente.',
         ]);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('admin.categories.index');
     }
 }

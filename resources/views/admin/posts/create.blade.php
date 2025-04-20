@@ -9,7 +9,7 @@
         <flux:breadcrumbs.item :href="route('dashboard')">
             Dashboard
         </flux:breadcrumbs.item>
-        <flux:breadcrumbs.item :href="route('posts.index')">
+        <flux:breadcrumbs.item :href="route('admin.posts.index')">
             Categorías
         </flux:breadcrumbs.item>
         <flux:breadcrumbs.item>
@@ -18,13 +18,10 @@
     </flux:breadcrumbs>
 
 
-    /*
-    'title', 'slug', 'excerpt', 'content', 'image_path', 'user_id', 'category_id', 'is_published', 'published_at'
-    */
 
     <div class="card mt-5">
 
-        <form action="{{ route('posts.store') }}" method="post">
+        <form action="{{ route('admin.posts.store') }}" method="post">
             @csrf
 
             <flux:input class="mb-5" value="{{ old('title') }}" type="text" name="title" placeholder="Ingresa el título de la publicación" label="Título" onInput="string_to_slug(this.value, '#slug')" />

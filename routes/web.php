@@ -4,15 +4,21 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\FrontendController;
 
 /*Route::get('/', function () {
     return view('welcome');
 })->name('home');*/
 
-Route::redirect('/', 'posts')->name('home');
+Route::redirect('/', 'posts')->name('inicio');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
+
+Route::get('/inicio', [FrontendController::class, 'index'])->name('inicio');
+
+Route::get('/equipo', [FrontendController::class, 'equipo'])->name('equipo');
 
 
 

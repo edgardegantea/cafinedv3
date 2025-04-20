@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Carousel;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
@@ -29,6 +30,8 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(500)->create(); */
 
-        Tag::factory(20)->create();
+        // Tag::factory(20)->create();
+
+        Carousel::factory(10)->create();
     }
 }

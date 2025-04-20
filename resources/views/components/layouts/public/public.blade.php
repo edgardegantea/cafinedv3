@@ -4,14 +4,21 @@
         [
             'name'  => 'Inicio',
             'icon'  => '',
-            'url'   => route('home'),
-            'current'    => request()->routeIs('posts.*'),
+            'url'   => route('inicio'),
+            'current'    => request()->routeIs('inicio'),
         ],
         [
             'name'  => 'Comunicación',
             'icon'  => '',
             'url'   => route('posts.index'),
             'current'    => request()->routeIs('posts.*'),
+        ],
+
+        [
+            'name'  => 'Nuestro equipo',
+            'icon'  => '',
+            'url'   => route('equipo'),
+            'current'    => request()->routeIs('equipo'),
         ],
     ];
 
@@ -28,7 +35,7 @@
     {{--<flux:brand href="#" logo="https://fluxui.dev/img/demo/logo.png" name="Acme Inc." class="px-2 dark:hidden" />--}}
 
 
-    <a href="{{ route('home') }}" class="ms-2 me-5 flex items-center space-x-2 rtl:space-x-reverse lg:ms-0" wire:navigate>
+    <a href="{{ route('inicio') }}" class="ms-2 me-5 flex items-center space-x-2 rtl:space-x-reverse lg:ms-0" wire:navigate>
         <p class="text-3xl">CAFINED Lab</p>
     </a>
 
@@ -102,6 +109,9 @@
 
                 <flux:menu.radio.group>
                     <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
+                </flux:menu.radio.group>
+                <flux:menu.radio.group>
+                    <flux:menu.item :href="route('dashboard')" icon="adjustments-horizontal" wire:navigate>{{ __('Dashboard') }}</flux:menu.item>
                 </flux:menu.radio.group>
 
                 <flux:menu.separator />

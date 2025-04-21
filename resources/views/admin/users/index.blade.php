@@ -25,7 +25,10 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Etiqueta
+                    Nombre
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Correo electrónico
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Acciones
@@ -39,6 +42,9 @@
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <td class="px-6 py-4">
                         {{ $user->name }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ $user->email }}
                     </td>
                     <td class="px-6 py-4">
 

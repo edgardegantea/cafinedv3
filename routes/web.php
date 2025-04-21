@@ -23,7 +23,7 @@ Route::get('/equipo', [FrontendController::class, 'equipo'])->name('equipo');
 
 
 Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
+    ->middleware(['auth', 'verified', 'admin'])
     ->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
@@ -34,4 +34,18 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
+
 require __DIR__.'/auth.php';
+
+
+
+
+
+
+
+
+
+
+
+
+

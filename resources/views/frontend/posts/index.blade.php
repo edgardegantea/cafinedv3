@@ -10,7 +10,7 @@
                     <div class="p-4">
                         <h2 class="text-xl font-semibold mb-2 text-black hover:text-blue-500 transition-colors duration-300">{{ $post->title }}</h2>
                         <p class="text-gray-700">{{ $post->excerpt }}</p>
-                        <p class="text-xs italic mt-2">Publicado el: {{ $post->created_at->locale('es_ES')->isoFormat('LL') }}</p>
+                        <flux:badge variant="solid" color="zinc" size="xs" class="text-xs font-mono font-light mt-2">Publicado el: {{ $post->created_at->locale('es_ES')->isoFormat('LL') }}</flux:badge>
                     </div>
                 </a>
             @endforeach

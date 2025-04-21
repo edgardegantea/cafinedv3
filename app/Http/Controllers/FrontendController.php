@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Models\Carousel;
 
@@ -46,7 +47,8 @@ class FrontendController extends Controller
 
     public function equipo()
     {
-        return view('frontend.info.equipo');
+        $posts = Post::orderBy('id', 'desc')->paginate(4);
+        return view('frontend.info.equipo', compact('posts'));
     }
 
 }

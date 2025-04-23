@@ -5,6 +5,7 @@ use Livewire\Volt\Volt;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ActivityController;
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -19,6 +20,7 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 Route::get('/inicio', [FrontendController::class, 'index'])->name('inicio');
 
 Route::get('/equipo', [FrontendController::class, 'equipo'])->name('equipo');
+Route::get('/activities', [ActivityController::class, 'index'])->name('activities');
 
 
 

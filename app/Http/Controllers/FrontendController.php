@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Carousel;
 
@@ -10,11 +10,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        $carouselItems = Carousel::where('is_active', true)
-            ->orderBy('order')
-            ->get();
-
-        return view('frontend.index', compact('carouselItems'));
+        return view('frontend.index');
     }
 
 
@@ -47,8 +43,8 @@ class FrontendController extends Controller
 
     public function equipo()
     {
-        $posts = Post::orderBy('id', 'desc')->paginate(4);
-        return view('frontend.info.equipo', compact('posts'));
+        $equipo = User::where('type', 'colaborador')->orWhere('type', 'tesista')->orWhere('type', 'lider')->orderBy('type', 'asc')->get();
+        return view('frontend.info.equipo', compact('equipo'));
     }
 
 }

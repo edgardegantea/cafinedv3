@@ -15,6 +15,10 @@ return new class extends Migration
             $table->enum('role', ['admin', 'estudiante', 'docente', 'usuario'])
                 ->default('usuario')
                 ->after('email');
+            $table->string('image_path')->nullable()->after('role');
+            $table->enum('type', ['lider', 'colaborador', 'tesista', 'serviciosocial', 'no'])->default('no')->after('image_path');
+            $table->boolean('active')->default(true)->after('type');
+            $table->text('bio')->nullable()->after('active');
         });
     }
 
@@ -25,6 +29,10 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('role');
+            $table->dropColumn('image_path');
+            $table->dropColumn('type');
+            $table->dropColumn('active');
+            $table->dropColumn('bio');
         });
     }
 };

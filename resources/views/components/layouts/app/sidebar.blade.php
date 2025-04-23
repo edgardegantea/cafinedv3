@@ -16,6 +16,13 @@
                 'current'    => request()->routeIs('admin.users.*'),
             ],
 
+            [
+                'name'  => 'Actividades',
+                'icon'  => 'academic-cap',
+                'url'   => route('admin.activities.index'),
+                'current'    => request()->routeIs('admin.activities.*'),
+            ],
+
 
             [
                 'name'  => 'Categorías',
@@ -49,8 +56,8 @@
 <head>
     @include('partials.head')
 </head>
-<body class="min-h-screen bg-white dark:bg-zinc-800">
-<flux:sidebar sticky stashable class="border-e bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
+<body class="min-h-screen bg-gray-300 dark:bg-zinc-800">
+<flux:sidebar sticky stashable class="border-e bg-white dark:border-b-zinc-950 dark:bg-zinc-900">
     <flux:sidebar.toggle class="lg:hidden" icon="x-mark"/>
 
     <a href="{{ route('dashboard') }}" class="me-5 flex items-center space-x-2 rtl:space-x-reverse font-extrabold" wire:navigate>
